@@ -32,4 +32,20 @@ public class Address{
         }
         return true;
     }
+    //Constructor
+    public Address(int streetNo, String street, String city, Province province, String postalCode) {
+        if(isPostalCodeValid(postalCode)) {
+            this.streetNo = streetNo;
+            this.street = street;
+            this.city = city;
+            this.province = province;
+            this.postalCode = postalCode;
+        }
+        else {
+            this.street = null;
+            this.city = null;
+            this.province = null;
+            this.postalCode = null;
+        }
+    }
 }
