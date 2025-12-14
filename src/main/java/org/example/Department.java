@@ -86,4 +86,22 @@ public class Department {
     public String toString() {
         return "Department Id:" + departmentId +" Department Name:" + departmentName;
     }
+    //Equals Method
+    /**
+     * Checks if 2 department objects are equals
+     * @param obj  the reference object with which to compare.
+     * @return that the departments are equals, otherwise returns false
+     */
+    public boolean equals (Object obj) {
+        if (!(obj instanceof Department)) {
+            return false;
+        }
+        Department other = (Department) obj;
+        
+        if (this.departmentId == null || other.departmentId == null) {
+            return false;
+        }
+        
+        return this.departmentId.equals(other.departmentId);
+    }
 }
