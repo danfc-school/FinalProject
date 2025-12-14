@@ -2,9 +2,11 @@ package org.example;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class Address{
     // Fields
     private int streetNo;
@@ -87,5 +89,10 @@ public class Address{
         if (isPostalCodeValid(postalCode)) {
             this.postalCode = postalCode.toUpperCase();
         }
+    }
+    //toString Method
+    @Override
+    public String toString() {
+        return streetNo + " " + street + ", " + city + " " + province + " " + postalCode;
     }
 }
