@@ -74,6 +74,10 @@ public class Address{
         }
     }
     //Getters
+    /**
+     * Gets all fields
+     * @return the values stored in address
+     */
     public int getStreetNo() {
         return streetNo;
     }
@@ -91,6 +95,10 @@ public class Address{
     }
 
     //Setters
+    /**
+     * Sets all fields
+     * Updates the values stored in Address
+     */
     public void setStreetNo(int streetNo) {
         this.streetNo = streetNo;
     }
