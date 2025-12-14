@@ -79,4 +79,11 @@ public class Department {
             this.departmentName = departmentName;
         }
     }
+    //toString Method
+    /**
+     * @return The department id and name
+     */
+    public String toString() {
+        return "Department Id:" + departmentId +" Department Name:" + departmentName;
+    }
 }
