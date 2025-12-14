@@ -68,4 +68,15 @@ public class Department {
     public static int getNextId() {
         return nextId;
     }
+    //Setters
+
+    /**
+     * Sets a new department name only if its valid
+     * @param departmentName department name
+     */
+    public void setDepartmentName(String departmentName) {
+        if (isDepartmentNameValid(departmentName)) {
+            this.departmentName = departmentName;
+        }
+    }
 }
