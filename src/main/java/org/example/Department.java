@@ -26,4 +26,22 @@ public class Department {
             }
         }
         return true;
+
+     //Constructor
+     /**
+     * Creates a Department using departmentName
+     * If the department name is invalid, it'll result in null
+     * @param departmentName department name
+     */
+    public Department(String departmentName) {
+        if (isDepartmentNameValid(departmentName) == false) {
+            this.departmentId = null;
+            this.departmentName = null;
+        }
+        else {
+            this.departmentName = departmentName;
+            this.departmentId = "D0" + nextId;
+            nextId = nextId + 1;
+        }
+    }
 }
