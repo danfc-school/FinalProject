@@ -1,5 +1,15 @@
 package org.example;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.EqualsAndHashCode;
+
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+
 public class Department {
     //Fields
     private String departmentId;
@@ -43,5 +53,19 @@ public class Department {
             this.departmentId = "D0" + nextId;
             nextId = nextId + 1;
         }
+    }
+    //Getters
+    /**
+     * Gets all fields
+     * @return the values stored in Department
+     */
+    public String getDepartmentId() {
+        return departmentId;
+    }
+    public String getDepartmentName() {
+        return departmentName;
+    }
+    public static int getNextId() {
+        return nextId;
     }
 }
