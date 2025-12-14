@@ -3,10 +3,13 @@ package org.example;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.EqualsAndHashCode
 
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
+    
 public class Address{
     // Fields
     private int streetNo;
@@ -94,5 +97,22 @@ public class Address{
     @Override
     public String toString() {
         return streetNo + " " + street + ", " + city + " " + province + " " + postalCode;
+    }
+    //Equals Method
+    @Override
+    public boolean equals (Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+
+        Address other = (Address) obj;
+
+        return  streetNo == other.streetNo &&
+                street.equals(other.street) &&
+                city.equals(other.city) &&
+                province == other.province &&
+                postalCode.equals(other.postalCode);
+        
     }
 }
