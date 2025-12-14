@@ -35,4 +35,21 @@ public class Student {
         return id;
     }
 
+    //Constructor
+    /**
+     * Creates a student with their ID being auto generated
+     * @param studentName studentName
+     * @param gender gender
+     * @param address address
+     * @param department department
+     */
+    public Student (String studentName, Gender gender, Address address, Department department) {
+        this.studentId = generateStudentId();
+        this.studentName = studentName;
+        this.gender = gender;
+        this.address = address;
+        this.department = department;
+        this.registeredCourses = new ArrayList<>();
+    }
+
 }
