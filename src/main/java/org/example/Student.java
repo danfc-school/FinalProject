@@ -24,4 +24,15 @@ public class Student {
     private ArrayList<Course> registeredCourses;
     private static int nextId = 1;
 
+    //Helper Method
+    /**
+     * Generates the student Id
+     * @return id
+     */
+    private String generateStudentID() {
+        String id = String.format ("S%06d", nextId);
+        nextId++;
+        return id;
+    }
+
 }
