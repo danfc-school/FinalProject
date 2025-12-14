@@ -1,5 +1,10 @@
 package org.example;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Address{
     // Fields
     private int streetNo;
@@ -46,6 +51,41 @@ public class Address{
             this.city = null;
             this.province = null;
             this.postalCode = null;
+        }
+    }
+    //Getters
+    public int getStreetNo() {
+        return streetNo;
+    }
+    public String getStreet() {
+        return street;
+    }
+    public String getCity() {
+        return city;
+    }
+    public Province province() {
+        return province;
+    }
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    //Setters
+    public void setStreetNo(int streetNo) {
+        this.streetNo = streetNo;
+    }
+    public void setStreet(String street) {
+        this.street = street;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+    public void setProvince(Province province) {
+        this.province = province;
+    }
+    public void setPostalCode(String postalCode) {
+        if (isPostalCodeValid(postalCode)) {
+            this.postalCode = postalCode.toUpperCase();
         }
     }
 }
