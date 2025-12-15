@@ -25,5 +25,22 @@ public class Assignment {
         this.weight = weight;
         this.scores = new ArrayList<>;
     }
+    
+    //Assignment Avg Method
+    /**
+     * Calculates the avg score of the assignement
+     * If score is empty the average is 0
+     * @return average score
+     */
+    public double calcAssignmentAvg() {
+        if(scores.isEmpty()) {
+            return 0;
+        }
+        int total = 0;
+        for(int score : scores) {
+            total += score;
+        }
+        return (double) total / scores.size();
+    }
 }
 
