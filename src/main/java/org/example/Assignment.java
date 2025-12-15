@@ -74,5 +74,15 @@ public class Assignment {
             scores.add(score);
         }
     }
+    //String Method
+    /**
+     * The final string to represent the assignment
+     * @return the final string
+     */
+    @Override
+    public String toString() {
+        return "Assignment ID:" + assignmentId + ", Name:" 
+                + assignmentName + ", Weight:" + weight;
+    }
 }
 
