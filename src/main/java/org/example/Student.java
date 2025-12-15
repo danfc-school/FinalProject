@@ -81,4 +81,36 @@ public class Student {
         course.getRegistredStudents().remove(this);
         return true;
     }
+    //Simplified String Methods
+    /**
+     * Converts the student to a simplified string
+     * @return Simplified string
+     */
+    public String toSimplifiedString() {
+        return studentId + " " + studentName + " " + department.getDepartmentName() + " ";
+    }
+
+    //String Methods
+    /**
+     * The final string to represent the student
+     * @return result
+     */
+    public String toString() {
+
+        String result = "";
+        result += "Student ID:" + studentId;
+        result += "\n" + "Name:" + studentName;
+        result += "\n" + "Gender:" + gender;
+        result += "\n" + "Address:" + address;
+        result += "\n" + "Department:" + department;
+        result += "\n" + "Registered Courses:";
+
+        for (Course course : registeredCourses) {
+            result += " " + course.getCourseId() + ", "
+                    + course.getCourseName() + ", "
+                    + course.getDepartment().getDepartmentName();
+
+        }
+        return result;
+    }
 }        
