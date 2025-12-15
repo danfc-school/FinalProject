@@ -142,4 +142,20 @@ import java.util.ArrayList;
             System.out.println(finalScores[i]);
         }
     }
+        //toSimplifiedString Method
+    public String toSimplifiedString() {
+        return courseId + " | " + courseName + "|" +credits + "|" + department.getDepartmentName();
+    }
+    
+    //toString Method
+    @Override
+    public String toString() {
+        return "Course ID:" + courseId +
+                "\n" + "Course Name:"+ courseName +
+                "\n" + "Credits:" + credits +
+                "\n" + "Department" + department +
+                "\n" + "Assignments" + assignments +
+                "\n" + "Registered Students:" + registeredStudents +
+                "\n" + "Assignment Weight Validation:" + isAssignmentWeightValid();
+    }
 }
