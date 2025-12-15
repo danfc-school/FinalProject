@@ -1,0 +1,12 @@
+package org.example;
+
+import java.util.ArrayList;
+
+public class Assignment {
+    //Fields
+    private String assignmentId;
+    private String assignmentName;
+    private double weight;
+    private ArrayList<Integer> scores;
+    private static int nextId = 1;
+}
