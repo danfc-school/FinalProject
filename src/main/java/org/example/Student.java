@@ -51,5 +51,20 @@ public class Student {
         this.department = department;
         this.registeredCourses = new ArrayList<>();
     }
+      //Register Course
+    /**
+    * Registers a student for a course
+    */
+    public boolean registerCourse(Course course) {
+        if (registeredCourses.contains(course)) {
+            return false;
+        }
+        registeredCourse.add(course);
+        course.getRegisteredStudents().add(this);
+        
+        for(int i = 0; i < course.getAssignements().size(); i++) {
+            course.getScores(this).add(null);
+        }
+        return true;
 
 }
