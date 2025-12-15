@@ -4,8 +4,8 @@ This Java project that simulates the coding behind a Cegep students career by go
 ***
 ### Class1 Address
 This class stores the students:
-Street Number
-Street Name
+\Street Number
+<br>Street Name
 City
 Province
 Postal Code
