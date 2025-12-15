@@ -24,8 +24,26 @@ import java.util.ArrayList;
     }
 
     //Helper Method
+    /**
+     * Generates Course Id
+     * @return generated course Id
+     */
     private String generateCourseId() {
         String id = String.format("C-%s-%02d", department.getDepartmentId(), nextId);
         return id;
+    }
+        
+    //Assignment Weight Validation Method
+    /**
+     * Checks if total weight of assignments = 100
+     * @return if assignments = 100 or not
+     */
+    public boolean isAssignmentWeightValid() {
+        double totalWeight = 0;
+        
+        for(Assignment a : assignments) {
+            totalWeight += a.getWeight();
+        }
+        return totalWeight == 100;
     }
 }
