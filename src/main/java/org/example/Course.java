@@ -1,6 +1,16 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Random;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.EqualsAndHashCode;
+
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
 
     //Fields
     public class Course {
@@ -157,5 +167,15 @@ import java.util.ArrayList;
                 "\n" + "Assignments" + assignments +
                 "\n" + "Registered Students:" + registeredStudents +
                 "\n" + "Assignment Weight Validation:" + isAssignmentWeightValid();
+    }
+        //Equals Method
+    @Override
+    public boolean equals (Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Course))
+            return false;
+
+        Course other = (Course) obj;
+        return courseId.equals(other.courseId);
     }
 }
