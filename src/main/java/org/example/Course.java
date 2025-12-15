@@ -103,4 +103,43 @@ import java.util.ArrayList;
         assignments.add(assignment);
         return true;
     }
+    //Generating Scores Method
+
+    /**
+     * Gnerates random scores for registered students and assignments
+     */
+    public void displayScores() {
+        Random random = new Random();
+
+        for(int i = 0; i < registeredStudents.size(); i++) {
+            int randomScore = random.nextInt(assignment.getMaxScore() + 1);
+
+            assignment.getScores().set(i, randomScore);
+        }
+    }
+
+    //Display Scores Method
+    public void displayScores() {
+        System.out.println("Course: " + courseName + " (" + courseId + ")");
+        System.out.println();
+
+        System.out.print("Student Name\t");
+        for (Assignment a : assignments) {
+            System.out.print(a.getAssignmentName() + "\t");
+        }
+
+        System.out.println("Final Score");
+
+        int[] finalScores = calcStudentsAverage();
+
+        for (int i = 0; i < registeredStudents.size(); i++) {
+            System.out.print(registeredStudents.get(i).getStudentName() + "\t");
+
+            for (Assignment a : assignments) {
+                System.out.print(a.getScores().get(i) + "\t");
+            }
+
+            System.out.println(finalScores[i]);
+        }
+    }
 }
