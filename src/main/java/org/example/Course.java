@@ -178,4 +178,34 @@ import lombok.EqualsAndHashCode;
         Course other = (Course) obj;
         return courseId.equals(other.courseId);
     }
+       //Getters
+    public String getCourseId() {
+        return courseId;
+    }
+    public String getCourseName() {
+        return courseName;
+    }
+    public double getCredits() {
+        return credits;
+    }
+    public Department getDepartment() {
+        return department;
+    }
+    public ArrayList<Assignment> getAssignments() {
+        return assignments;
+    }
+    public ArrayList<Student> getRegisteredStudents() {
+        return registeredStudents;
+    }
+
+    //Setters
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+    public void setCredits(double credits) {
+        this.credits = credits;
+    }
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 }
