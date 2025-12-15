@@ -65,6 +65,10 @@ import java.util.ArrayList;
         return true;
     }
     //Calc Average Method
+    /**
+     * Calculates average score for students
+     * @return final averages for students
+     */
     public int[] calcStudentAverage() {
         int[] averages = new int[registeredStudents.size()];
 
