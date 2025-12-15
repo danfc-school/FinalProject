@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Assignment {
     //Fields
@@ -41,6 +42,37 @@ public class Assignment {
             total += score;
         }
         return (double) total / scores.size();
+    }
+    //Generate Random Score
+    /**
+     * Generates random scores for students with a rule set
+     * @param numberOfStudents numberof students that need a generated score
+     */
+    public void generateRandomScore(int numberOfStudents) {
+        Random random = new Random();
+        scores.clear();
+
+        for(int i = 0; i < numberofStudents; i++) {
+            int randomCategory = random.nextInt(11);
+            int score;
+
+            if (randomCategory == 0) {
+                score = random.nextInt(60);
+            }
+            else if (randomCategory == 1 || randomCategory == 2) {
+                score = 60 + random.nextInt(10);
+            }
+            else if (randomCategory == 3 || randomCategory == 4) {
+                score = 70 + random.nextInt(10);
+            }
+            else if (randomCategory >= 5 && randomCategory <= 8) {
+                score = 80 + random.nextInt(10);
+            }
+            else {
+                score = 90 + random.nextInt(11);
+            }
+            scores.add(score);
+        }
     }
 }
 
