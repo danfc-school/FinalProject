@@ -86,4 +86,21 @@ import java.util.ArrayList;
         }
         return averages;
     }
+    //New Assignment Method
+    /**
+     * Adds a new assignment
+     * @param assignmentName assignment's name
+     * @param weight assignment's weight
+     * @param maxScore max score possible
+     * @return true if asssignment is added, false if it isnt
+     */
+    public boolean addAssignment(String assignmentName,double weight, int maxScore) {
+        Assignment assignment = new Assignment(assignmentName, weight, maxScore);
+
+        for (int i = 0; i < registeredStudents.size(); i++) {
+            assignment.getScores().add(null);
+        }
+        assignments.add(assignment);
+        return true;
+    }
 }
