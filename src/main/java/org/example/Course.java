@@ -46,4 +46,22 @@ import java.util.ArrayList;
         }
         return totalWeight == 100;
     }
+
+    //Register Student Method
+    /**
+     * Registers students into the course
+     * Adds null for each assignment
+     * @param student the student thats getting registered
+     * @return true if registration is successful, false if it isn't
+     */
+    public boolean registerStudent(Student student) {
+        if(student == null) {
+            return false;
+        }
+        registeredStudents.add(student);
+        for (Assignment a : assignments) {
+            a.getScores().add(null);
+        }
+        return true;
+    }
 }
