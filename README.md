@@ -4,49 +4,49 @@ This Java project that simulates the coding behind a Cegep students career by go
 ***
 ### Class1 Address
 This class stores the students:
-\Street Number
+<br>Street Number
 <br>Street Name
-City
-Province
-Postal Code
+<br>City
+<br>Province
+<br>Postal Code
 
-This class also ensures that the postal code is valid (CDCDCD format) and puts all this info into a valid format.
+<br>This class also ensures that the postal code is valid (CDCDCD format) and puts all this info into a valid format.
 ***
 ### Class2 Department
 This class is like an academic department, it:
-Stores department names
-Auto Generated department Id's
-Validates Department names (Letters and spaces)
+<br>Stores department names
+<br>Auto Generated department Id's
+<br>Validates Department names (Letters and spaces)
 ***
 ### Class3 Student
 This class manages a students:
-Course registration
-Academic info
-Registered courses
+<br>Course registration
+<br>Academic info
+<br>Registered courses
 
-This class also auto generates student id's
+<br>This class also auto generates student id's
 ***
 ### Class4 Assignment
 This class stores an assignments:
-Name
-Weight
-Score
+<br>Name
+<br>Weight
+<br>Score
 
-This class generates random test scores and calculates averages.
-This class also auto generates assignment Ids
+<br>This class generates random test scores and calculates averages.
+<br>This class also auto generates assignment Ids
 ***
 ### Class5 Course
 This class manages:
-Assignments
-Stugrents (registered)
+<br>Assignments
+<br>Stugrents (registered)
 
-This class Calculates weighted scores and displays grades in a table
-Finally, this class auto generates course Id's and makes sure that the assignments weights equals up to 100%.
+<br>This class Calculates weighted scores and displays grades in a table
+<br>Finally, this class auto generates course Id's and makes sure that the assignments weights equals up to 100%.
 ***
 ### Class6 Util
-As the conclusion to the whole system, This class tests every method that could be tested and also converts strings to title case.
+<br>As the conclusion to the whole system, This class tests every method that could be tested and also converts strings to title case.
 ***
 ## Result
-As a result of completing this project, I have shown my ability to write a multitude of code used for a fictional school system, this included writting fields, methods, loops, using lombok for getters, setters, to strings and equal methods and using all this across mutiple java classes to complete it.
+<br>As a result of completing this project, I have shown my ability to write a multitude of code used for a fictional school system, this included writting fields, methods, loops, using lombok for getters, setters, to strings and equal methods and using all this across mutiple java classes to complete it.
 
 
