@@ -54,6 +54,7 @@ public class Student {
       //Register Course
     /**
     * Registers a student for a course
+    * @return true if it works, false if not registered
     */
     public boolean registerCourse(Course course) {
         if (registeredCourses.contains(course)) {
@@ -66,5 +67,18 @@ public class Student {
             course.getScores(this).add(null);
         }
         return true;
-
-}
+    }
+    //Drop Course
+    /**
+     * Drops a course for the student
+     * @return true if it works, false if not registered
+     */
+    public boolean dropCourse(Course course) {
+        if (!registeredCourses.contains(course)) {
+            return false;
+        }
+        registeredCourses.remove(course);
+        course.getRegistredStudents().remove(this);
+        return true;
+    }
+}        
